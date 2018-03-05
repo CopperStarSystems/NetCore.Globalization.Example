@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Globalization.Example.Web", "NetCore.Globalization.Example.Web\NetCore.Globalization.Example.Web.csproj", "{4CD4712D-73E9-4711-914F-4973C6A847E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Globalization.Example.ViewComponents", "NetCore.Globalization.Example.ViewComponents\NetCore.Globalization.Example.ViewComponents.csproj", "{F1B4E259-FE12-4713-86D0-A510B15A3BFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD4712D-73E9-4711-914F-4973C6A847E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD4712D-73E9-4711-914F-4973C6A847E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD4712D-73E9-4711-914F-4973C6A847E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD4712D-73E9-4711-914F-4973C6A847E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B4E259-FE12-4713-86D0-A510B15A3BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B4E259-FE12-4713-86D0-A510B15A3BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B4E259-FE12-4713-86D0-A510B15A3BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B4E259-FE12-4713-86D0-A510B15A3BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD39B9B8-F828-4E98-B528-F746FB4A04A2}
+	EndGlobalSection
+EndGlobal
