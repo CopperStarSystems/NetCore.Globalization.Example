@@ -43,7 +43,8 @@ services.AddLocalization(p => { p.ResourcesPath = "Resources"; });
 * The application must be configured with a list of supported cultures, which are injected when we configure the RequestLocalizationOptions.
 
 # Fun Stuff:
-After you build the project, if you look in the bin folder, you'll see one folder for each supported language.  Each folder contains a .dll containing the resources for that specific language.
+* After you build the project, if you look in the bin folder, you'll see one folder for each supported language.  Each folder contains a .dll containing the resources for that specific language.
+* You can also change the culture that is used for a given request by appending a `culture` URL parameter, i.e. http://localhost:28645/?culture=en-US
 
 # Notes
 This project explicitly disables MVC's handler for `Accept-Language` headers in order to make it easier to override the current culture configured in the user's browser.
