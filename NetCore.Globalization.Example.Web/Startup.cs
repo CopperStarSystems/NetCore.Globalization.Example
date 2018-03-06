@@ -15,7 +15,7 @@ namespace NetCore.Globalization.Example.Web
 {
     public class Startup
     {
-        // These strings are case-sensitive.
+        // These strings are case-sensitive, matching up to the resource files.
         readonly IList<CultureInfo> supportedCultures = new List<CultureInfo> {new CultureInfo("en-US"), new CultureInfo("es-ES"), new CultureInfo("de-DE")};
 
         public Startup(IConfiguration configuration)
@@ -40,11 +40,15 @@ namespace NetCore.Globalization.Example.Web
 
             app.UseStaticFiles();
 
+            // Configure the application to use localization for requests
             app.UseRequestLocalization(new RequestLocalizationOptions
                                        {
+                // Configure the default culture to be used for requests
                                            DefaultRequestCulture = new RequestCulture("en-US"),
+                                           // Configure supported cultures and UI cultures
                                            SupportedCultures = supportedCultures,
                                            SupportedUICultures = supportedCultures,
+                                           // Only use QueryStringCultureProvider and CookieCultureProvider
                                            RequestCultureProviders =
                                                new List<IRequestCultureProvider>
                                                {
@@ -59,7 +63,10 @@ namespace NetCore.Globalization.Example.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configure localization service, specifying the root location where .resx files are stored.
             services.AddLocalization(p => { p.ResourcesPath = "Resources"; });
+
+            // Configure dependency injection to inject a pre-configured RequestLocalizationOptions on request. (see _Layout.cshtml)
             services.Configure<RequestLocalizationOptions>(options =>
                                                            {
                                                                options.DefaultRequestCulture = new RequestCulture("en-US");

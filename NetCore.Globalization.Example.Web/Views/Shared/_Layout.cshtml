@@ -20,10 +20,13 @@
     </environment>
 </head>
 <body>
-
+@* Get a pre-configured RequestLocalizationOptions from our IoC container *@
 @inject IOptions<RequestLocalizationOptions> LocOptions
 @{
+    // Get a list of supported cultures from the injected LocalizationOptions
     var cultureItems = LocOptions.Value.SupportedUICultures.ToList();
+
+    // Get the selected culture for this request so we can select the correct item in the list
     var currentCulture = Context.Features.Get<IRequestCultureFeature>().RequestCulture;
 }
 <div class="container body-content">
@@ -33,6 +36,7 @@
     <form action="/Home/SetLanguage">
         <input name="returnUrl" type="hidden" value="@Context.Request.Path"/>
         <select name="culture">
+            @* Populate dropdown list with available languages *@
             @foreach (var item in cultureItems)
             {
                 <option value="@item.Name" selected="@(currentCulture.Culture.Name == item.Name)">

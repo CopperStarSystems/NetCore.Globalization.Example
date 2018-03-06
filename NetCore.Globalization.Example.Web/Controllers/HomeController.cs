@@ -19,6 +19,7 @@ namespace NetCore.Globalization.Example.Web.Controllers
 
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
+            // Store the selected culture to a cookie
             Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
                                     CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                                     new CookieOptions {Expires = DateTimeOffset.UtcNow.AddYears(1)});
