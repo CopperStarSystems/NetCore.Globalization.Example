@@ -1,3 +1,8 @@
+# Stuck?  Want to learn more about these technologies?
+**Contact me on CodeMentor for Live 1:1 Help!**
+
+[![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/copperstarconsulting?utm_source=github&utm_medium=button&utm_term=copperstarconsulting&utm_campaign=github)
+
 # NetCore.Globalization.Example
 A brief example that I built for a student to illustrate techniques for localizing ASP.NET Core 2.0 ViewComponents.
 
